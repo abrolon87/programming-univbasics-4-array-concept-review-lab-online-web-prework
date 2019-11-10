@@ -8,6 +8,19 @@ def find_max_value(array)
   array.max
 end
 
+#def find_min_value(array)
+#  array.min
+#end
 def find_min_value(array)
-  array.min
+  min = 0
+    array.length.times do |count|
+      if count == 0
+        min = array[count]
+      else
+        if array[count] < min
+          min = array[count]
+        end
+      end
+    end
+  min
 end
